@@ -18,22 +18,9 @@ const userSchema = new Schema(
             required: [true, 'Email is required'],
             unique: true,
         },
-        subscription: {
+        phoneNumber: {
             type: String,
-            enum: ['starter', 'pro', 'business'],
-            default: 'starter',
-        },
-        avatarURL: {
-            type: String,
-            required: true,
-        },
-        verify: {
-            type: Boolean,
-            default: false,
-        },
-        verificationToken: {
-            type: String,
-            required: [true, 'Verify token is required'],
+            required: [true, 'Set phone number for user'],
         },
         token: String,
     },
